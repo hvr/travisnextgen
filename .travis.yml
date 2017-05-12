@@ -4,6 +4,9 @@ ghc: "8.2.1"
 
 cabal: "2.0"
 
+before_install:
+ - set
+
 install:
  - set
  - ls -l /opt/ghc/
