@@ -7,12 +7,18 @@ dist: trusty
 cabal: "2.0"
 
 before_install:
- - set
+# - set
+ - update-alternatives --display opt-ghc
+ - update-alternatives --list opt-ghc
+ - update-alternatives --display opt-cabal
 
 install:
- - set
+# - set
  - ls -l /opt/ghc/
  - ls -l /opt/ghc/bin
  - ls -l /opt/cabal/
  - ghc --version
  - which ghc
+
+ - update-alternatives --display opt-ghc
+ - update-alternatives --list opt-ghc
