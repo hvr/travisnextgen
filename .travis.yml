@@ -10,4 +10,7 @@ before_install:
 install:
  - set
  - ls -l /opt/ghc/
+ - ls -l /opt/ghc/bin
  - ls -l /opt/cabal/
+ - ghc --version
+ - which ghc
