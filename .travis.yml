@@ -11,21 +11,22 @@ matrix:
     - ghc: "7.8.4"
     - ghc: "7.6.3"
 
-before_install:
+#before_install:
 # - set
 # - update-alternatives --display opt-ghc
 # - update-alternatives --list opt-ghc
 # - update-alternatives --display opt-cabal
 
-install:
+#install:
 # - set
- - ls -l /opt/ghc/
- - ls -l /opt/ghc/bin
- - ls -l /opt/cabal/
- - ghc --version
- - which ghc
+# - ls -l /opt/ghc/
+# - ls -l /opt/ghc/bin
+# - ls -l /opt/cabal/
+# - ghc --version
+# - which ghc
 
- - cabal update
+script:
+# - cabal update
  - cabal new-build
  - cabal new-test --enable-test
 
