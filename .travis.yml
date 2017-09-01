@@ -13,9 +13,9 @@ matrix:
 
 before_install:
 # - set
- - update-alternatives --display opt-ghc
- - update-alternatives --list opt-ghc
- - update-alternatives --display opt-cabal
+# - update-alternatives --display opt-ghc
+# - update-alternatives --list opt-ghc
+# - update-alternatives --display opt-cabal
 
 install:
 # - set
@@ -25,5 +25,9 @@ install:
  - ghc --version
  - which ghc
 
- - update-alternatives --display opt-ghc
- - update-alternatives --list opt-ghc
+ - cabal update
+ - cabal new-build
+ - cabal new-test --enable-test
+
+# - update-alternatives --display opt-ghc
+# - update-alternatives --list opt-ghc
