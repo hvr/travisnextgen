@@ -5,11 +5,14 @@ cabal: "2.0"
 
 matrix:
   include:
+    - ghc: "head"
     - ghc: "8.2.1"
     - ghc: "8.0.2"
     - ghc: "7.10.3"
     - ghc: "7.8.4"
     - ghc: "7.6.3"
+    - ghc: "7.4.2"
+    - ghc: "7.0.4"
 
 #before_install:
 # - set
@@ -24,6 +27,8 @@ matrix:
 # - ls -l /opt/cabal/
 # - ghc --version
 # - which ghc
+
+install:
 
 script:
 # - cabal update
