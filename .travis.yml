@@ -1,12 +1,13 @@
 language: haskell
 dist: trusty
 
-cabal: "head"
+cabal: "2.4"
 
 matrix:
   include:
-    - ghc: "head"
-    - ghc: "8.2.1"
+    - ghc: "8.6.3"  
+    - ghc: "8.4.4"
+    - ghc: "8.2.2"
     - ghc: "8.0.2"
     - ghc: "7.10.3"
     - ghc: "7.8.4"
